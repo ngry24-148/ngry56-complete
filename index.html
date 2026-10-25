@@ -154,6 +154,23 @@ section.block{padding:104px 20px;scroll-margin-top:64px}
 .fine{max-width:1080px;margin:40px auto 0;border-top:1px solid var(--line);padding-top:24px;font-size:13px;color:var(--ink2)}
 .fine p{margin:0}
 
+/* ---------- 運営情報 ---------- */
+#credits{background:var(--ground2)}
+.credits{max-width:760px;margin:0 auto;background:var(--paper);border:1px solid var(--line);padding:clamp(28px,5vw,48px) clamp(20px,5vw,48px)}
+.credits dl{margin:0;display:grid;grid-template-columns:minmax(0,15em) minmax(0,1fr);gap:0 24px}
+.credits dt,.credits dd{margin:0;padding:18px 0;border-bottom:1px solid var(--line2)}
+.credits dt{font-size:14px;font-weight:500;letter-spacing:.06em;color:var(--gold-d);line-height:1.6}
+.credits dt small{display:block;font-size:12px;font-weight:400;color:var(--ink3);letter-spacing:.04em}
+.credits dd{font-family:var(--mincho);font-size:19px;letter-spacing:.12em;line-height:1.5}
+.credits dd span{display:block;font-family:var(--latin);font-size:15px;letter-spacing:.08em;color:var(--ink3)}
+.credits .org{margin:28px 0 0;text-align:center;font-family:var(--mincho);font-size:15px;letter-spacing:.12em}
+.credits .org b{display:block;font-size:20px;font-weight:600;margin-top:4px}
+@media (max-width:560px){
+  .credits dl{grid-template-columns:minmax(0,1fr)}
+  .credits dt{padding-bottom:4px;border-bottom:0}
+  .credits dd{padding-top:0}
+}
+
 footer{background:var(--ink);color:#EFE6D3;padding:40px 20px}
 .ft{max-width:1080px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px 32px}
 .ft b{display:block;font-family:var(--mincho);font-weight:400;font-size:16px;letter-spacing:.1em}
@@ -163,6 +180,8 @@ footer{background:var(--ink);color:#EFE6D3;padding:40px 20px}
 @media (max-width:560px){
   .stamp{right:4px;top:auto;bottom:-8px}
   .hd{justify-content:center;text-align:center}
+  nav{justify-content:center}
+  nav a{padding:10px 7px;font-size:13px;letter-spacing:.04em}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -194,7 +213,7 @@ footer{background:var(--ink);color:#EFE6D3;padding:40px 20px}
   <div class="hd">
     <a class="brand" href="#top"><small>第58回流高祭 生徒会企画</small><b>校内デジタルスタンプラリー</b></a>
     <nav aria-label="ページ内メニュー">
-      <a href="#top">トップ</a><a href="#message">メッセージ</a><a href="#download">ダウンロード</a>
+      <a href="#top">トップ</a><a href="#message">メッセージ</a><a href="#download">ダウンロード</a><a href="#credits">運営情報</a>
     </nav>
   </div>
 </header>
@@ -298,6 +317,20 @@ footer{background:var(--ink);color:#EFE6D3;padding:40px 20px}
       <p>※ 公開期間：[YYYY年MM月DD日]まで</p>
       <p>※ このページはコンプリート賞受賞者向けです。アクセスコードの共有はご遠慮ください。</p>
       <p>※ 個人で楽しむ範囲でご利用ください。再配布・商用利用はできません。</p>
+    </div>
+  </section>
+  <section id="credits" class="block">
+    <div class="sec-head"><p>Credits</p><h2>運営情報</h2></div>
+    <div class="credits">
+      <dl>
+        <dt>スタンプラリー主担当<small>生徒会総務 書記</small></dt>
+        <dd>関 勇心<span>Yugo Seki</span></dd>
+        <dt>スタンプラリー開発・運営<small>生徒会総務 書記・広報担当</small></dt>
+        <dd>瀬下 大翔<span>Hiroto Seshimo</span></dd>
+        <dt>Webサイト・賞状カード作成<small>生徒会長</small></dt>
+        <dd>平野 治輝<span>Haruki Hirano</span></dd>
+      </dl>
+      <p class="org">企画・運営<b>令和8年度 生徒会総務</b></p>
     </div>
   </section>
 </main>
